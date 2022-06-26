@@ -1,6 +1,6 @@
 //RA2111003010551
 //Shivansh Dengla
-//Banking System
+//Banking System using all concepts
 
 #include <stdio.h>
 
@@ -23,7 +23,7 @@ int main()
     int n, choice, account_no, amount, index;
 
     printf("Banking System\n\n");
-    printf("Number of customer records you want to enter? : ");
+    printf("No. of customer records you want to enter? : ");
     scanf("%d", &n);
     accept(data, n);
     do
@@ -31,11 +31,11 @@ int main()
 
         printf("\nBanking System Menu :\n");
         printf("Press 1 to display all records.\n");
-        printf("Press 2 to search a record.\n");
-        printf("Press 3 to deposit amount.\n");
+        printf("Press 2 to search for records.\n");
+        printf("Press 3 to deposit the amount.\n");
         printf("Press 4 to withdraw amount.\n");
-        printf("Press 0 to exit\n");
-        printf("\nEnter choice(0-4) : ");
+        printf("Press 0 to exit the system\n");
+        printf("\nEnter choice (0-4) : ");
         scanf("%d", &choice);
         switch (choice)
         {
@@ -88,7 +88,7 @@ void accept(struct customer list[80], int s)
         scanf("%d", &list[i].account_no);
         fflush(stdin);
         printf("Enter name : ");
-        gets(list[i].name);
+        scanf("%s", &list[i].name);
         list[i].balance = 0;
     } 
 }
